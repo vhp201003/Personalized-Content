@@ -1,8 +1,8 @@
 app_name = "personalized_content"
 app_title = "Personalized Content"
 app_publisher = "1"
-app_description = "This app Customized Content to improve experience for customer"
-app_email = "ai@gmail.com"
+app_description = "1"
+app_email = "email@gmail.com"
 app_license = "mit"
 
 # Apps

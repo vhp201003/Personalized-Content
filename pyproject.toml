@@ -1,9 +1,9 @@
 [project]
 name = "personalized_content"
 authors = [
-    { name = "1", email = "ai@gmail.com"}
+    { name = "1", email = "email@gmail.com"}
 ]
-description = "This app Customized Content to improve experience for customer"
+description = "1"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

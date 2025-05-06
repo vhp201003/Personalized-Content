@@ -1,6 +1,6 @@
 ## Personalized Content
 
-This app Customized Content to improve experience for customer
+1
 
 #### License
 
