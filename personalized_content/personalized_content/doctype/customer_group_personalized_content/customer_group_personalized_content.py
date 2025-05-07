@@ -14,8 +14,14 @@ class CustomerGroupPersonalizedContent(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+		amount: DF.Currency
+		content: DF.Text | None
+		date_time: DF.Datetime | None
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
+		personalized_content: DF.Link
+		status: DF.Literal["Draft", "Submitted", "Approved"]
+		target: DF.Data
 	# end: auto-generated types
 	pass

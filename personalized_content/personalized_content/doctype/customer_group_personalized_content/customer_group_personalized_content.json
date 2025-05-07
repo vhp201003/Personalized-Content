@@ -1,118 +1,79 @@
 {
-    "actions": [],
-    "allow_rename": 1,
-    "creation": "2025-05-05 10:01:05.418757",
-    "doctype": "DocType",
-    "editable_grid": 1,
-    "engine": "InnoDB",
-    "field_order": [
-        "parent",
-        "parenttype",
-        "parentfield",
-        "idx",
-        "target",
-        "personalized_content",
-        "content",
-        "status",
-        "date_time",
-        "amount"
-    ],
-    "fields": [
-        {
-            "fieldname": "parent",
-            "fieldtype": "Data",
-            "label": "Parent",
-            "hidden": 1,
-            "no_copy": 1,
-            "read_only": 1
-        },
-        {
-            "fieldname": "parenttype",
-            "fieldtype": "Link",
-            "label": "Parent Type",
-            "hidden": 1,
-            "no_copy": 1,
-            "options": "DocType",
-            "read_only": 1
-        },
-        {
-            "fieldname": "parentfield",
-            "fieldtype": "Data",
-            "label": "Parent Field",
-            "hidden": 1,
-            "no_copy": 1,
-            "read_only": 1
-        },
-        {
-            "fieldname": "idx",
-            "fieldtype": "Int",
-            "label": "Index",
-            "hidden": 1,
-            "no_copy": 1,
-            "read_only": 1
-        },
-        {
-            "fieldname": "target",
-            "fieldtype": "Data",
-            "in_list_view": 1,
-            "label": "Target",
-            "read_only": 1,
-            "reqd": 1
-        },
-        {
-            "fieldname": "personalized_content",
-            "fieldtype": "Link",
-            "in_list_view": 1,
-            "label": "Personalized Content",
-            "options": "Personalized Content",
-            "reqd": 1
-        },
-        {
-            "fieldname": "content",
-            "fieldtype": "Text",
-            "in_list_view": 1,
-            "label": "Content",
-            "fetch_from": "personalized_content.content",
-            "read_only": 1
-        },
-        {
-            "fieldname": "status",
-            "fieldtype": "Select",
-            "in_list_view": 1,
-            "label": "Status",
-            "fetch_from": "personalized_content.status",
-            "read_only": 1,
-            "options": "Draft\nSubmitted\nApproved"
-        },
-        {
-            "fieldname": "date_time",
-            "fieldtype": "Datetime",
-            "in_list_view": 1,
-            "label": "Date and Time",
-            "fetch_from": "personalized_content.date_time",
-            "read_only": 1
-        },
-        {
-            "fieldname": "amount",
-            "fieldtype": "Currency",
-            "in_list_view": 1,
-            "label": "Amount",
-            "fetch_from": "personalized_content.amount",
-            "read_only": 1
-        }
-    ],
-    "grid_page_length": 50,
-    "index_web_pages_for_search": 1,
-    "istable": 1,
-    "links": [],
-    "modified": "2025-05-06 15:06:10.627850",
-    "modified_by": "Administrator",
-    "module": "Personalized Content",
-    "name": "Promotional Scheme Personalized Content",
-    "owner": "Administrator",
-    "permissions": [],
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "states": [],
-    "track_changes": 1
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-01 12:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target",
+  "personalized_content",
+  "content",
+  "status",
+  "date_time",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "target",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personalized_content",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Personalized Content",
+   "options": "Personalized Content",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "personalized_content.content",
+   "fieldname": "content",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Content",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "personalized_content.status",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "personalized_content.date_time",
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date and Time",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "personalized_content.amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-07 17:16:43.504927",
+ "modified_by": "Administrator",
+ "module": "Personalized Content",
+ "name": "Customer Group Personalized Content",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

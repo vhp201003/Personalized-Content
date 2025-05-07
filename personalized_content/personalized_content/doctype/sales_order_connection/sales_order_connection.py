@@ -14,6 +14,13 @@ class SalesOrderConnection(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-
+		amount: DF.Currency
+		item: DF.Link
+		note: DF.SmallText | None
+		parent: DF.Data
+		parentfield: DF.Data
+		parenttype: DF.Data
+		quantity: DF.Int
+		rate: DF.Float
 	# end: auto-generated types
 	pass
