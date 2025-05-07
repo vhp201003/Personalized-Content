@@ -43,7 +43,11 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Promotional Scheme": "personalized_content/overrides/promotional_scheme.js",
+    "Customer Group": "personalized_content/overrides/customer_group.js",
+    "Customer": "personalized_content/overrides/customer.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -129,9 +133,9 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"PromotionalScheme": "personalized_content.personalized_content.overrides.promotional_scheme.PromotionalScheme",
+}
 
 # Document Events
 # ---------------
@@ -148,23 +152,13 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"personalized_content.tasks.all"
-# 	],
-# 	"daily": [
-# 		"personalized_content.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"personalized_content.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"personalized_content.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"personalized_content.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"cron": {
+        "* * * * *": [
+            "personalized_content.personalized_content.schedule.cron_stock_ageing.push_stock_ageing_to_localhost"
+        ]
+    }
+}
 
 # Testing
 # -------
@@ -236,7 +230,7 @@ app_license = "mit"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs

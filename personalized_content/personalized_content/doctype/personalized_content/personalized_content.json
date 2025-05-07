@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-28 11:41:35.250530",
+ "doctype": "DocType",
+ "documentation": "Connection",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "content_details_section",
+  "customer",
+  "customer_id",
+  "column_break_regg",
+  "status",
+  "amount",
+  "custom_section_break_vtwat",
+  "content",
+  "explanation_section",
+  "explaination",
+  "references_section",
+  "cart_item",
+  "sales_invoice_item",
+  "offer_section",
+  "column_break_kcge",
+  "offering_item",
+  "connection_tab",
+  "sales_order_connection",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "content_details_section",
+   "fieldtype": "Section Break",
+   "label": "Content Details"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Content"
+  },
+  {
+   "fieldname": "column_break_regg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "custom_section_break_vtwat",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "explanation_section",
+   "fieldtype": "Section Break",
+   "label": "Explanation"
+  },
+  {
+   "fieldname": "explaination",
+   "fieldtype": "Small Text",
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Explaination"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "description": "Temporary list of items added to the cart that the customer intends to purchase",
+   "fieldname": "cart_item",
+   "fieldtype": "Table",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Cart Items",
+   "options": "Opportunity Item"
+  },
+  {
+   "description": "List of items the customer has purchased",
+   "fieldname": "sales_invoice_item",
+   "fieldtype": "Table",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Sales Invoice Items",
+   "options": "Sales Invoice Item"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "offer_section",
+   "fieldtype": "Section Break",
+   "label": "Offer"
+  },
+  {
+   "description": "List of items recommendations for the customer based on their preferences or purchase history",
+   "fieldname": "offering_item",
+   "fieldtype": "Table",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Offering Item",
+   "options": "Offering Item"
+  },
+  {
+   "fieldname": "connection_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connection",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "sales_order_connection",
+   "fieldtype": "Table",
+   "label": "Sales Order ",
+   "options": "Sales Order Connection"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Personalized Content",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "column_break_kcge",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Customer",
+   "link_doctype": "Customer",
+   "link_fieldname": "customer_name"
+  },
+  {
+   "group": "Customer",
+   "link_doctype": "Customer Group",
+   "link_fieldname": "customer_group_name"
+  },
+  {
+   "group": "Pricing Rule",
+   "link_doctype": "Promotional Scheme",
+   "link_fieldname": "apply_on"
+  }
+ ],
+ "modified": "2025-05-07 15:12:52.086122",
+ "modified_by": "Administrator",
+ "module": "Personalized Content",
+ "name": "Personalized Content",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
